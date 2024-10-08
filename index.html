@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyscript Reflection</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: #87CEEB; /* Sky Blue */
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        width: 35%;
+        margin: auto;
+        padding: 50px;
+        background-color: #032B44; /* Navy Blue */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-style: solid;
+        border-width: 5px;
+        border-color: #4169E1; /* Royal Blue */
+      }
+      
+      h1 {
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 36px;
+        font-weight: bold;
+      }
+      
+      .outer-container {
+        background-color: #98B2D1; /* Cerulean Blue */
+        padding: 20px;
+        border: solid;
+        border-color: #4169E1; /* Royal Blue */
+        border-width: 5px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+      .inner-container {
+        background-color: #4682B4; /* Steel Blue */
+        padding: 10px;
+        border: solid;
+        border-color: #4169E1; /* Royal Blue */
+        border-width: 5px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+      p {
+        font-weight: bold;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Reflection</h1>
+        <div class="outer-container">
+            <p>Name: Mikaela Mae P. Agban</p>
+            <p>Grade & Section: BSIT 1st year</p>
+            <div class="inner-container">
+                <py-script>
+                    from pyscript import Element
+
+                    reflection_content = [
+                        "Recently, I attended the Data Privacy and Awareness Campaign, which opened my eyes to the importance of protecting personal data in today’s digital age. With the rapid growth of technology and the internet, almost all our activities—whether it be personal, academic, or professional—are now connected to some form of data exchange. This event gave me a deeper understanding of how important it is to be aware of what happens to our personal information online, and how we can take steps to protect it.",
+                        
+                        "One of the key takeaways from the campaign was the understanding of what constitutes personal data and how easily it can be collected, shared, and misused. Personal data includes anything that can identify an individual, such as name, address, email, phone number, and even browsing habits. I realized that we often give out this information without much thought, especially when signing up for online services, creating social media accounts, or shopping online. The speakers at the event emphasized how companies, websites, and even hackers can collect this data and use it for various purposes, both legal and illegal.",
+                        
+                        "What struck me the most was the discussion on how we, as users, often unknowingly give consent to share our personal data. Whenever we click “I agree” to the terms and conditions of a website or an app, we may be allowing companies to access more information than we realize. This made me think about how many times I’ve clicked that button without reading what I was agreeing to. This small act of negligence could have major consequences, such as identity theft, financial loss, or unwanted access to personal details.",
+                        
+                        "The campaign also highlighted the legal framework surrounding data privacy, particularly the Data Privacy Act of 2012 in the Philippines. I learned that this law was enacted to protect personal data and to hold organizations accountable for how they handle such information. It was reassuring to know that there are laws in place that can help protect my data, but the speakers made it clear that we must also take responsibility for our own data security.",
+                        
+                        "One part of the event that I found particularly useful was the practical tips on how to safeguard our personal information. These included using strong, unique passwords for different accounts, being cautious about the websites we visit, enabling two-factor authentication, and regularly checking privacy settings on social media platforms. While I had heard some of these tips before, this campaign emphasized how vital they are in protecting our personal data from falling into the wrong hands.",
+                        
+                        "Moreover, I realized the importance of educating others about data privacy. Not everyone may be aware of the risks, especially those who are not as tech-savvy. As digital citizens, we have a role in spreading awareness about data privacy and helping those around us become more vigilant about their online security. I came to understand that protecting data is not just an individual responsibility but a collective effort. The more informed we are, the safer the entire online community becomes."
+
+                        "In conclusion, attending the Data Privacy and Awareness Campaign was a valuable experience. It made me more conscious of how my personal information is being used and the potential risks that come with being careless about data protection. I now have a stronger sense of responsibility in safeguarding my data and will be more mindful of the privacy settings on the websites and apps I use. This event has also inspired me to share what I’ve learned with others so that more people can take steps to protect their personal data. As we continue to live in a world that is increasingly dependent on technology, awareness and action on data privacy are more important than ever."
+                    ]
+
+                    # Insert the reflection content into the HTML
+                    reflection_html = "<p>" + "</p><p>".join(reflection_content) + "</p>"
+                    Element('reflection').element.innerHTML = reflection_html
+                </py-script>
+
+                <div id="reflection"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
